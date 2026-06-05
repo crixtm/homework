@@ -1,5 +1,4 @@
 import { expect, Locator, Page } from '@playwright/test';
-import { HeaderPage } from './header_page';
 
 export class LoggedInPage {
     readonly page: Page;
@@ -11,6 +10,7 @@ export class LoggedInPage {
     }
 
     async expectLoggedIn(user: string) {
-        await expect(this.editor).toBeVisible({timeout: 10_000});
+        const profileLink = this.page.getByRole('link', { name: user });
+        await expect(profileLink).toBeVisible({ timeout: 10_000 });
     }
 }
