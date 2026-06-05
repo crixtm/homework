@@ -68,3 +68,8 @@ This project is organized around a few core patterns:
 ## Improvement steps
 
 Currently, the user data is stored in a test file, but these are completely dummy users. In the future, the credentials should be stored in `.env` files and/or GitHub Secrets instead of the codebase. Using environment variables for sensitive data is a common and recommended approach in Playwright and Node.js projects. 
+
+## Additional documents 
+This folder contains the additional documents:
+- Example test cases
+- Example bug report
